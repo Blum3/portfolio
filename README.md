@@ -1,5 +1,6 @@
-# portfolio
+# Portfolio
 
+This is the code that I use for my portfolio website
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
