@@ -2,13 +2,12 @@
   <div>
     <div class="separator"></div>
     <div class="container">
-      <h2> Project Title </h2>
+      <h2> {{ project.title }} </h2>
 
-      <div id="carousel">
         <carousel :items-to-show="1">
-          <slide v-for="slide in 10" :key="slide">
+          <slide v-for="i in project.images" v-bind:key="i">
             <div class="carousel_item">
-              <img src="../images/wave-bg.png">
+              <img :src=i.url />
             </div>
           </slide>
 
@@ -17,14 +16,11 @@
             <pagination />
           </template>
         </carousel>
-      </div>
+
+
       
-      <p> description description description description description </p>
-      <p> description description description description description </p>
-      <p> description description description description description </p>
-      <p> description description description description description </p>
-      <p> description description description description description </p>
-      <p> description description description description description </p>
+      <p class="description"> {{project.description}}</p>
+
     </div>
   </div>
 </template>
@@ -40,6 +36,13 @@ export default {
     Slide,
     Pagination,
     Navigation,
+  },
+  props: {
+    project: {
+      type: Object
+    }
+  },
+  data() {
   },
 }
 </script>
@@ -72,6 +75,11 @@ h2{
   height: 20px;
 }
 
+.description{
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
 img{
   width: 60%;
   height: 60%;
@@ -84,7 +92,6 @@ img{
   background-color: rgba(239,239,51,1);;
   color: var(--vc-clr-white);
   font-size: 20px;
-  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;

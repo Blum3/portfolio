@@ -1,9 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 import ProjectPreview from "@/components/ProjectPreview.vue";
-import jQuery from "jquery";
-const $ = jQuery;
-window.$ = $;
 
 </script>
 
@@ -18,11 +14,8 @@ window.$ = $;
   </header>
 
   <section id="section1">
-    <project-preview/>
+    <project-preview :project="item" v-for="item in projects" :key="item.id" />
   </section>
-  <project-preview/>
-  <project-preview/>
-  <project-preview/>
 
 
   <footer>
@@ -32,10 +25,25 @@ window.$ = $;
 
 
 <script>
+
 export default {
   name: "App",
   data() {
     return {
+      projects : [
+        {
+          id : 1,
+          title : "EKO : a pixel art 2D platformer",
+          images: [{id: 1, url: '../src/images/eko1.jpg'}, {id: 2, url: '../src/images/eko2.jpg'}, {id: 3, url: '../src/images/eko3.jpg'}],
+          description : "Work In Progress : This project is still under development. I wanted to create a 2D platformer with a fun and musical gameplay. This project was very interesting because I had to do everything, programming, level design, art, animations, etc… During this project, I used Unity, and Photoshop, programming was done in C#. 2023"
+        },
+        {
+          id : 2,
+          title : "Projet 2",
+          images: [{id: 1, url: '../src/images/eko1.jpg'}, {id: 2, url: '../src/images/eko2.jpg'}, {id: 3, url: '../src/images/eko3.jpg'}],
+          description : "bllllllllllllllllllllllllbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbllllllllllllllllllllllllllllllaaaaaaaaaaaaa"
+        }
+      ]
     };
   },
   methods: {
