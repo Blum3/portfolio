@@ -72,7 +72,7 @@ h2{
 .separator{
   background-color: rgba(239,239,51,1);
   width: 100%;
-  height: 20px;
+  height: 40px;
 }
 
 .description{

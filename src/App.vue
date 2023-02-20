@@ -7,6 +7,21 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 
 <template>
   <header>
+
+    <div id="nav">
+      <ul>
+        <li><a class="active" href="#">Home</a>
+        </li>
+        <li><a href="#">About Us</a>
+        </li>
+        <li><a href="#">Blah</a>
+        </li>
+        <li><a href="#">exampl</a>
+        </li>
+      </ul>
+    </div>
+
+
     <h1> Galilee Mason </h1>
     <p id="small_title"> UI, UX, Games, and Web Design </p>
 
@@ -110,6 +125,52 @@ h1{
   cursor: pointer;
   width: 10%;
 }
+
+
+
+
+#nav {
+  left: 0px;
+  height: 40px;
+  background-color: rgba(239,239,51,1);
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+  z-index: 30000;
+}
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#nav ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+#nav ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+#nav ul li:hover {
+  background-color: grey;
+}
+
+/* Add a color to the active/current link */
+#nav a.active {
+  background-color: black;
+  color: white;
+}
+
+
+
+
 
 footer{
   background-color: rgba(239,239,51,1);
