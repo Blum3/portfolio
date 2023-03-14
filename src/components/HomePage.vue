@@ -9,23 +9,21 @@
 
     <nav>
       <div class="logo">
-        <router-link @click="scrollToTop" to="/">Sophie Bacquié</router-link>
+        <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link  @click="scrollToTop"  to="/art">Art</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/reportages">Dessins de reportage</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/aboutme">À Propos de moi</router-link></li>
       </ul>
       <div class="contact-icons">
-        <a href="https://www.instagram.com/sophiebacquie/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = artIcon" @mouseout="currentIcon1 = defaultIcon">  </a>
-        <a href="https://www.instagram.com/atelierborderouge/"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = ateIcon" @mouseout="currentIcon2 = defaultIcon">  </a>
-        <a href="https://www.instagram.com/sophiebacquie_report/"> <img class="header_icon"  v-bind:src="currentIcon3" @mouseover="currentIcon3 = repIcon" @mouseout="currentIcon3 = defaultIcon">  </a>
-        <a href="/src/other/book-sophie-bacquie.pdf" target="_blank"> <img class="header_icon"  v-bind:src="currentIcon4" @mouseover="currentIcon4 = porIcon" @mouseout="currentIcon4 = pdfIcon">  </a>
+        <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+        <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
       </div>
     </nav>
 
 
-    <img id="anim" src="/src/images/anim_home.gif">
+    <img id="anim" src="/src/images/anim-home.gif">
 
   </header>
 
@@ -38,16 +36,12 @@ export default {
   name: "HomePage",
   data() {
     return {
-      defaultIcon: '/src/images/logoinsta.png',
-      pdfIcon: '/src/images/logopdf.png',
-      artIcon: '/src/images/logoart.png',
-      ateIcon: '/src/images/logoate.png',
-      repIcon: '/src/images/logorep.png',
-      porIcon: '/src/images/logopor.png',
-      currentIcon1: '/src/images/logoinsta.png',
-      currentIcon2: '/src/images/logoinsta.png',
-      currentIcon3: '/src/images/logoinsta.png',
-      currentIcon4: '/src/images/logopdf.png',
+      linkedinIcon: '/src/images/linkedinicon.png',
+      gitIcon: '/src/images/githubicon.png',
+      linkedinTxt: '/src/images/linkedintxt.png',
+      gitTxt: '/src/images/githubtxt.png',
+      currentIcon1: '/src/images/linkedinicon.png',
+      currentIcon2: '/src/images/githubicon.png',
     }
   },
   methods: {

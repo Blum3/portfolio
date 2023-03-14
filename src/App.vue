@@ -19,7 +19,7 @@
     <a href="#" @click.prevent="scrollToTop">Haut de page</a>
     <br>
     <br>
-    <p>Icons created by Freepik on <a href="https://www.flaticon.com/" > Flaticon</a> </p>
+    <p>Icons created by Freepik, Riajulislam and Dave Gandy on <a href="https://www.flaticon.com/" > Flaticon</a> </p>
   </footer>
 </template>
 

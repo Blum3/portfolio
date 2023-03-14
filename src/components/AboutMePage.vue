@@ -9,27 +9,60 @@
 
     <nav>
       <div class="logo">
-        <router-link @click="scrollToTop" to="/">Sophie Bacquié</router-link>
+        <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link to="/art">Art</router-link></li>
-        <li><router-link to="/reportages">Dessins de reportage</router-link></li>
-        <li><router-link to="/aboutme" class="active">À Propos de moi</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
+        <li><router-link  @click="scrollToTop" class="active" to="/aboutme">À Propos de moi</router-link></li>
       </ul>
       <div class="contact-icons">
-        <a href="https://www.instagram.com/sophiebacquie/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = artIcon" @mouseout="currentIcon1 = defaultIcon">  </a>
-        <a href="https://www.instagram.com/atelierborderouge/"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = ateIcon" @mouseout="currentIcon2 = defaultIcon">  </a>
-        <a href="https://www.instagram.com/sophiebacquie_report/"> <img class="header_icon"  v-bind:src="currentIcon3" @mouseover="currentIcon3 = repIcon" @mouseout="currentIcon3 = defaultIcon">  </a>
-        <a href="/src/other/book-sophie-bacquie.pdf" target="_blank"> <img class="header_icon"  v-bind:src="currentIcon4" @mouseover="currentIcon4 = porIcon" @mouseout="currentIcon4 = pdfIcon">  </a>
+        <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+        <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
       </div>
     </nav>
 
   </header>
 
-  <div class="wip">
-    <img src="/src/images/charpentier.png">
+  <div class="aboutme">
+    <img src="/src/images/me.png" class="picofme">
+    <p>
+      My name is Galilée Mason, I am a 21 years old student at UT3 Paul Sabatier in M1 Human Machine Interaction. I am looking for an internship in UI/UX from 02/05/2022 to 01/08/2022.
+    </p>
     <br>
-    <p>En Construction</p>
+    <p>
+      Passionate about video games and design for a long time, I have the chance today to get involved in personal and collective projects around my passions, either at the university or during my free time. I am interested in the UI/UX aspect of computer systems. The purely visual aspect of my projects is important to me. I just came back from two semesters in Germany where I studied computer science at the HTW Berlin.
+    </p>
+    <br>
+    <p>
+      Skills :
+      Python
+      C
+      C#
+      HTML
+      CSS
+      Javascript
+      Photoshop
+      Unity
+      Java
+      SQL
+      Node.js
+      Vue.js
+      XML
+      Maven
+    </p>
+    <br>
+    <p>
+      <a target=”_blank” href="/src/other/CV_Mason_français.pdf">
+        Mon CV
+      </a>
+    </p>
+    <br>
+    <p>
+      Me contacter :
+      <br> mason.galilee@gmail.com
+      <br> +33 6 84 81 14 42
+    </p>
   </div>
 
 
@@ -42,16 +75,12 @@ export default {
   name: "HomePage",
   data() {
     return {
-      defaultIcon: 'src/images/logoinsta.png',
-      pdfIcon: 'src/images/logopdf.png',
-      artIcon: 'src/images/logoart.png',
-      ateIcon: 'src/images/logoate.png',
-      repIcon: 'src/images/logorep.png',
-      porIcon: 'src/images/logopor.png',
-      currentIcon1: 'src/images/logoinsta.png',
-      currentIcon2: 'src/images/logoinsta.png',
-      currentIcon3: 'src/images/logoinsta.png',
-      currentIcon4: 'src/images/logopdf.png',
+      linkedinIcon: '/src/images/linkedinicon.png',
+      gitIcon: '/src/images/githubicon.png',
+      linkedinTxt: '/src/images/linkedintxt.png',
+      gitTxt: '/src/images/githubtxt.png',
+      currentIcon1: '/src/images/linkedinicon.png',
+      currentIcon2: '/src/images/githubicon.png',
     };
   },
   methods: {

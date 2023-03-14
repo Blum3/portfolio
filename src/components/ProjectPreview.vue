@@ -78,9 +78,9 @@ export default {
 
 
 *{
-  color: rgb(10, 10, 10);
+  color: #0e0e0e;
   text-align: center;
-  background-color: #f1f1e8;
+  background-color: #f5f5f0;
 }
 
 .title{

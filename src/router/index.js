@@ -11,14 +11,14 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: "/art",
-      name: "Art",
-      component: () => import("../components/ArtPage.vue"),
+      path: "/work",
+      name: "Work",
+      component: () => import("../components/WorkPage.vue"),
     },
     {
-      path: "/reportages",
-      name: "Reports",
-      component: () => import("../components/ReportsPage.vue"),
+      path: "/inspirations",
+      name: "Inspirations",
+      component: () => import("../components/InspiPage.vue"),
     },
     {
       path: "/aboutme",
