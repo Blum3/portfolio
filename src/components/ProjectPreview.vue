@@ -198,6 +198,7 @@ export default {
     padding-bottom: 40px;
   }
   .img_to_display{
+    max-height: 25vh;
   }
   .description, .title_and_subtitle {
     padding-left: 5%;

@@ -12,9 +12,9 @@
         <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link  @click="scrollToTop"  to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/aboutme">À Propos de moi</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       </ul>
       <div class="contact-icons">
         <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>

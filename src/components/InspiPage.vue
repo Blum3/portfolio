@@ -13,9 +13,9 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
         <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link  @click="scrollToTop"  to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
         <li><router-link  @click="scrollToTop" class="active" to="/inspirations">Inspirations</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/aboutme">À Propos de moi</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       </ul>
       <div class="contact-icons">
         <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
@@ -47,204 +47,43 @@ export default {
       projects : [
         {
           id : 1,
-          title : "Bleu bleu",
-          subtitle : "2021",
-          description : "Bleu bleu est un reportage auto édité avec le soutient de Mixart Myrys, 7animé, Lieu Commun, Terra Nova.\n" +
-              "Textes par Bérangère Cagnat",
+          title : "In the Gamer's Brain",
+          subtitle : "Célia Hodent",
+          description : "A book that I loved, telling how important interfaces and use experience is to video games.",
           last : false,
           pics_only : true,
           slides: [
             {
-              image: "src/data/bleu bleu/bleu 6r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/bleu 8r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/essais combo.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/nouveaux dessins 3 r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/nouveaux dessins 4 r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/nouveaux dessins 11r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/nouveaux dessins 12 r.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/objet bleu retouch.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/bleu bleu/texte_tarif_lieu-1.png",
-              title: null,
-              description: null
+              image: "src/data/inspi/itgb.jpg",
             },
           ],
         },
         {
           id: 2,
-          title: "Flambère",
-          subtitle: "2022",
-          description: "Voici l’Abécédaire des Droits de l’Enfant de la Flambère. Avec comme point de départ les 26 lettres de l’alphabet, pour 26 mots, qui renvoient à 26 histoires et récits, pour mieux comprendre les réalités que vivent les enfants et les jeunes du terrain de la Flambère, bidonville proche du centre- ville de Toulouse. Cet Abécédaire des Droits de l’Enfant de la Flambère dépeint le quotidien de ces enfants et de ces jeunes, pour qui les droits, même les plus élémentaires, sont souvent bafoués. \n" +
-              "L’association Rencont’roms nous intervient sur le terrain de la Flambère depuis 2013, et travaille plus particulièrement avec les enfants et les jeunes \n" +
-              "+ d’infos : rencontromsnous.com. \n" +
-              "Cet Abécédaire a reçu le soutien du Ministère de la Culture, DGLFLF, dans le cadre de l’appel à projet « Action culturelle et langue française 2021 ». Il bénéficie également du soutien de la Ville de Toulouse, du Conseil départemental de la Haute- Garonne, de la Région Occitanie / Pyrénées- Méditerranée, de la Préfecture Haute-Garonne / Occitanie, du FDVA Haute-Garonne & de la CAF Haute- Garonne. ",
+          title: "Information is beautiful",
+          subtitle: "David McCandless",
+          description: "A really beautiful book about data-visualisation",
           last: false,
           pics_only : true,
           slides: [
             {
-              image: "src/data/flambere/_couv.jpg",
-            },
-            {
-              image: "src/data/flambere/A.jpg",
-            },
-            {
-              image: "src/data/flambere/B.jpg",
-            },
-            {
-              image: "src/data/flambere/C.jpg",
-            },
-            {
-              image: "src/data/flambere/D.jpg",
-            },
-            {
-              image: "src/data/flambere/E.jpg",
-            },
-            {
-              image: "src/data/flambere/F.jpg",
-            },
-            {
-              image: "src/data/flambere/G.jpg",
-            },
-            {
-              image: "src/data/flambere/H.jpg",
-            },
-            {
-              image: "src/data/flambere/I.jpg",
-            },
-            {
-              image: "src/data/flambere/J.jpg",
-            },
-            {
-              image: "src/data/flambere/K2.jpg",
-            },
-            {
-              image: "src/data/flambere/L.jpg",
-            },
-            {
-              image: "src/data/flambere/M2.jpg",
-            },
-            {
-              image: "src/data/flambere/N.jpg",
-            },
-            {
-              image: "src/data/flambere/O.jpg",
-            },
-            {
-              image: "src/data/flambere/P.jpg",
-            },
-            {
-              image: "src/data/flambere/Q.jpg",
-            },
-            {
-              image: "src/data/flambere/R2.jpg",
-            },
-            {
-              image: "src/data/flambere/S.jpg",
-            },
-            {
-              image: "src/data/flambere/T.jpg",
-            },
-            {
-              image: "src/data/flambere/U.jpg",
-            },
-            {
-              image: "src/data/flambere/V.jpg",
-            },
-            {
-              image: "src/data/flambere/W.jpg",
-            },
-            {
-              image: "src/data/flambere/X3.jpg",
-            },
-            {
-              image: "src/data/flambere/Y.jpg",
-            },
-            {
-              image: "src/data/flambere/Z.jpg",
+              image: "src/data/inspi/iib.jpg",
             },
           ],
         },
         {
-          id : 3,
-          title : "Procès des \"Authentic Sisters\"",
-          subtitle : "2018",
-          description : "Le procès des \"Authentic Sisters\" s'est ouvert le 14 mai 2018 pour s'achever le 30 mai à la  16ème chambre correctionnelle du nouveau Tribunal de Grande Instance de Paris. Sur le banc des accusés, 16 personnes dont onze femmes. Ces Nigérianes font partie d'un réseau de prostitution. Elles aidaient des compatriotes à fuir le Nigeria pour venir en France, qui une fois arrivées devaient se prostituer pour payer les \"mamas maquerelles\".\n" +
-              "Un processus bien rôdé entre illusions, rituels et menaces",
-          last : true,
+          id: 3,
+          title: "Game Next Door",
+          subtitle: "",
+          description: "A Youtube channel talking about video games through game design, user experience and psychology.",
+          last: true,
           pics_only : true,
           slides: [
             {
-              image: "src/data/proces/1vue.jpeg",
-            },
-            {
-              image: "src/data/proces/3arenne 1.jpeg",
-            },
-            {
-              image: "src/data/proces/4proces clement seule contre tous couleur.jpeg",
-            },
-            {
-              image: "src/data/proces/5proces clement 1.jpeg",
-            },
-            {
-              image: "src/data/proces/6traduction.gif",
-            },
-            {
-              image: "src/data/proces/7proces clement avocat.jpg",
-            },
-            {
-              image: "src/data/proces/9proces clement hieratique.jpeg",
-            },
-            {
-              image: "src/data/proces/10proces clement trio bad guy.jpeg",
-            },
-            {
-              image: "src/data/proces/11proces clement salle.jpg",
-            },
-            {
-              image: "src/data/proces/12proces clement juju.jpeg",
-            },
-            {
-              image: "src/data/proces/13proces clement trio good guy.jpeg",
-            },
-            {
-              image: "src/data/proces/13proces clement trio good guy.jpeg",
-            },
-            {
-              image: "src/data/proces/15proces clement juge.jpeg",
+              image: "src/data/inspi/gnd.jpg",
             },
           ],
-        }
+        },
       ]
     };
   },

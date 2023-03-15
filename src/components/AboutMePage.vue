@@ -12,9 +12,9 @@
         <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link  @click="scrollToTop"  to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
-        <li><router-link  @click="scrollToTop" class="active" to="/aboutme">À Propos de moi</router-link></li>
+        <li><router-link  @click="scrollToTop" class="active" to="/aboutme">About Me</router-link></li>
       </ul>
       <div class="contact-icons">
         <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
@@ -36,30 +36,31 @@
     <br>
     <p>
       Skills :
-      Python
-      C
-      C#
-      HTML
-      CSS
-      Javascript
-      Photoshop
-      Unity
-      Java
-      SQL
-      Node.js
-      Vue.js
-      XML
+      Python,
+      C,
+      C#,
+      HTML,
+      CSS,
+      Javascript,
+      Photoshop,
+      Premiere Pro,
+      Unity,
+      Java,
+      SQL,
+      Node.js,
+      Vue.js,
+      XML,
       Maven
     </p>
     <br>
     <p>
       <a target=”_blank” href="/src/other/CV_Mason_français.pdf">
-        Mon CV
+        Click here to see my CV
       </a>
     </p>
     <br>
     <p>
-      Me contacter :
+      Contact :
       <br> mason.galilee@gmail.com
       <br> +33 6 84 81 14 42
     </p>

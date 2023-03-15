@@ -13,9 +13,9 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
         <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
       </div>
       <ul class="menu">
-        <li><router-link  @click="scrollToTop" class="active" to="/work">Work</router-link></li>
+        <li><router-link  @click="scrollToTop" class="active" to="/work">My Work</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/aboutme">À Propos de moi</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       </ul>
       <div class="contact-icons">
         <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
@@ -97,32 +97,17 @@ export default {
           pics_only : true,
           slides: [
             {
-              image: "src/data/maisons/1.jpg",
+              image: "src/data/eko/ekodemo.gif",
               title: null,
               description: null
             },
             {
-              image: "src/data/maisons/2.jpg",
+              image: "src/data/eko/eko.jpg",
               title: null,
               description: null
             },
             {
-              image: "src/data/maisons/3.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/maisons/4.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/maisons/5.jpg",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/maisons/6.JPG",
+              image: "src/data/eko/eko1.jpg",
               title: null,
               description: null
             },
@@ -142,22 +127,17 @@ export default {
           pics_only : true,
           slides: [
             {
-              image: "src/data/sp/smartphox1.png",
+              image: "src/data/motups/motups1.jpg",
               title: null,
               description: null
             },
             {
-              image: "src/data/sp/smartphox2.png",
+              image: "src/data/motups/motups2.jpg",
               title: null,
               description: null
             },
             {
-              image: "src/data/sp/smartphox3.png",
-              title: null,
-              description: null
-            },
-            {
-              image: "src/data/sp/smartphox4.png",
+              image: "src/data/motups/motups3.jpg",
               title: null,
               description: null
             },
