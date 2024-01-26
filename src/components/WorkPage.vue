@@ -6,24 +6,44 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 
 
 <template>
-  <div id="header">
+    <div id="header">
 
-    <nav>
-      <div class="logo">
-        <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
-      </div>
-      <ul class="menu">
-        <li><router-link  @click="scrollToTop" class="active" to="/work">My Work</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
-      </ul>
-      <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
-        <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
-      </div>
-    </nav>
-
+<nav>
+  <div class="logo">
+    <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
   </div>
+
+  <div class="hamburger">
+    <img id="burgericon" src='/images/burger-classic.png' alt="burgermenu" @click="openMenu" v-show="!isMenuOpen">
+    <img id="crossicon" src='/images/cross-classic.png' alt="cross" @click="closeMenu" v-show="isMenuOpen">
+  </div>
+
+  <ul class="menu">
+    <li><router-link  @click="scrollToTop" class="active" to="/work">My Work</router-link></li>
+    <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
+    <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
+  </ul>
+  <div class="contact-icons">
+    <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+    <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
+  </div>
+</nav>
+
+</div>
+
+<div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
+<ul>
+    <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+    <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
+    <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
+    <li>
+      <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="side_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+    </li>
+    <li>
+      <a href="https://github.com/Blum3"> <img class="side_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
+    </li>
+  </ul>
+</div>
 
   <section id="main_section">
     <project-preview :project="item" v-for="item in projects" :key="item.id"/>
@@ -45,15 +65,51 @@ export default {
       gitTxt: '/images/githubtxt.png',
       currentIcon1: '/images/linkedinicon.png',
       currentIcon2: '/images/githubicon.png',
+      isMenuOpen: false,
 
       projects : [
       {
-          id : 6,
-          title : "Local Link",
-          subtitle : "a design bootcamp project (2023)",
-          description : "The first week of my master, we had to design a system corresponding to a wide subject we were given. During this week, I learned how to organize effective brainstormings, paper and video prototypes, experience maps, storyboards and many more things. It was very interesting and I learned a lot.",
+          id : 7,
+          title : "Concrete Kick-off",
+          subtitle : "a mobile app to find street football games (2023)",
+          description : "Concrete Kick-off is a mobile app that I imagined and designed during a Graphic Design course in my Master. I got to use the Illustrator, Miro and Figma. It was very fun and satisfying to work around an idea brought by myself.",
           last : false,
           first : true,
+          pics_only : true,
+          slides: [
+            {
+              image: "/data/concrete/conc1.png",
+            },
+            {
+              image: "/data/concrete/conc3.png",
+            },
+            {
+              image: "/data/concrete/conc4.png",
+            },
+            {
+              image: "/data/concrete/conc5.png",
+            },
+            {
+              image: "/data/concrete/conc6.png",
+            },
+            {
+              image: "/data/concrete/conc7.png",
+            },
+            {
+              image: "/data/concrete/concvid.gif",
+            },
+            {
+              image: "/data/concrete/concvid2.gif",
+            },
+          ],
+        },
+      {
+          id : 6,
+          title : "Local Link",
+          subtitle : "a local kitchen and grocery store (2023)",
+          description : "The first week of my master, we had to design a system corresponding to a wide subject we were given. During this week, I learned how to organize effective brainstormings, paper and video prototypes, experience maps, storyboards and many more things. It was very interesting and I learned a lot.",
+          last : false,
+          first : false,
           pics_only : true,
           slides: [
             {
@@ -83,7 +139,7 @@ export default {
                 "During this project, I am using Unity so programming is done in C#. This project is still under development.\n" +
                 "\n",          
           last : false,
-          first : true,
+          first : false,
           pics_only : true,
           slides: [
           {
@@ -233,7 +289,7 @@ export default {
               "Reality escape is an escape game in augmented reality playable with your phone. I created this application during the course “Augmented Reality Applications and Theoretical Foundations” at HTW Berlin in 2022.\n" +
               "\n" +
               "During this project, I used Unity, Photshop and Vuforia, programming was done in C#.",
-          last : false,
+          last : true,
           pics_only : true,
           slides: [
             {
@@ -271,8 +327,16 @@ export default {
       window.scrollTo({
         top: 0,
         behavior: "smooth"
-      });
-    }
+      })
+    },
+    closeMenu() {
+      // Hide the side menu and cross icon, hide the burger icon
+      this.isMenuOpen = false;
+    },
+    openMenu() {
+      // Show the side menu and cross icon, show the burger icon
+      this.isMenuOpen = true;
+    },
   },
 };
 </script>

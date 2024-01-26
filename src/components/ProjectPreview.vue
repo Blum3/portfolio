@@ -29,13 +29,23 @@
         <img v-bind:id="currentIndex < project.slides.length -1 ? 'right' : 'right_deac'" :src="chevrons.rightCurrent" @click="nextSlide">
       </div>
 
+      
+
       <div class="title_and_subtitle">
         <p>
           <a class="title classic-text"> {{ project.title }} </a>
+          <br>
           <a class="subtitle"> {{ project.subtitle }}</a>
         </p>
       </div>
       <p class="description"> {{project.description}}</p>
+
+      <div class="vertical_list">
+        <div v-for="(slide, index) in project.slides" :key="index"  >
+          <img class="img_to_display" :src="slide.image">
+        </div>
+
+      </div>
 
       <div v-if="!project.last" class="separator"></div>
       <div v-if="project.last">

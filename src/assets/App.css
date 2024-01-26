@@ -15,6 +15,14 @@ color: var(--text-color);
 }
 
 
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
 /* -------------- HEADER -------------- */
 
 #header {
@@ -39,6 +47,57 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: var(--menu-background-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+.side-menu {
+    width: 200px; /* Set the initial width of the side panel */
+    height: 100%;
+    color: rgb(41, 41, 41);
+    transition: 0.5s;
+    padding-top: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--menu-background-color);
+    transition: transform 0.3s ease;
+    transform: translate(100%);
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--menu-text-color);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: var(--link-hover-color);
+}
+
+.side-menu li {
+    list-style: none;
+}
+
+.menu-open {
+    transform: translate(0%);
+}
+
+
+
+.hamburger img {
+    width: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer;
 }
 
 .logo a {
@@ -103,6 +162,10 @@ padding-right: 15px;
 padding-left: 15px;
 }
 
+.side_icon {
+    width: 30px;
+    }
+
 /* ... rest of the code ... */
 
 /* -------------- FOOTER -------------- */
@@ -157,15 +220,34 @@ align-self: center;
 nav {
     font-size: 10px;
 }
+
+.hamburger {
+    display: block;
+}
+
+.menu li a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+    color: var(--menu-text-color);
+    font-family: var(--title-font-family);
+    }
+
 .logo a {
-    font-size: 12px;
+    font-size: 18px;
     margin: 0;
 }
-.header_icon {
-    width: 20px;
-    padding-right: 2px;
-    padding-left: 2px;
+
+.menu {
+    display: none;
 }
+
+
+.contact-icons {
+    display: none;
+}
+
+
 .menu li a {
     padding-left: 10px;
     padding-right: 10px;

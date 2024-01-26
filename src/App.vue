@@ -5,6 +5,7 @@
 
 
 <template>
+
   <div :class="{ active: isPanelActive }" class="side-panel">
     <div id="styles-list">
       <img class="style-icon active-style" id="classic-icon" src="/images/accessibility.png" alt="classic" @click="setStyle('classic')">
@@ -18,7 +19,9 @@
       </div>
     </div>
   </div>
+
   <router-view></router-view>
+
   <footer>
     <br>
     <router-link @click="scrollToTop" to="/">Accueil</router-link>
@@ -37,7 +40,7 @@
       to be removed, please contact me.
     </p>
     <p>
-      Illustration realised by Cléo Binot.
+      Portrait realised by Cléo Binot.
     </p>
     <p>Icons created by Freepik, Riajulislam and Dave Gandy on <a href="https://www.flaticon.com/" > Flaticon</a> </p>
   </footer>
@@ -181,6 +184,12 @@ export default {
 
 .active-style:hover{
   transform: scale(1);
+}
+
+@media screen and (max-width: 1000px) {
+  .side-panel {
+    display: none;
+  }
 }
 
 </style>
