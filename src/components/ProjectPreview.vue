@@ -22,7 +22,7 @@
 
         <div class="slides">
           <div v-for="(slide, index) in project.slides" :key="index" v-show="currentIndex === index">
-            <img class="img_to_display" :src="slide.image">
+            <img class="img_to_display" :src="slide.image" @click="fullView">
           </div>
         </div>
 
@@ -61,6 +61,12 @@
 
 
   </div>
+
+
+  <div id="FullScreenView" >
+    <img id="FullScreenImg">
+    <img id="CloseImgButton" src='/images/cross-classic.png' @click="closeFullView">
+  </div>
 </template>
 
 <script>
@@ -96,6 +102,13 @@ export default {
         this.currentIndex--;
         this.slidePosition = -this.currentIndex * this.slideWidth;
       }
+    },
+    fullView() {
+      document.getElementById("FullScreenImg").src = this.project.slides[this.currentIndex].image;
+      document.getElementById("FullScreenView").style.display = "block";
+    },
+    closeFullView() {
+      document.getElementById("FullScreenView").style.display = "none";
     },
   },
 }

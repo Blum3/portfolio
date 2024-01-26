@@ -195,24 +195,25 @@ footer p {
 /* -------------- ABOUT ME -------------- */
 
 .aboutme {
-min-height: 100vh;
-text-align: center;
-background-color: var(--background-color);
-color: var(--text-color);
-display: flex;
-flex-direction: column;
-justify-content: center;
-font-size: 18px;
-padding: 0 25%;
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0 25%;
 }
 
 .picofme {
-width: 800px;
-padding-top: 30px;
-align-self: center;
+    width: 800px;
+    padding-top: 30px;
+    align-self: center;
 }
 
-/* ... rest of the code ... */
+
+
 
 /* -------------- RESPONSIVE -------------- */
 

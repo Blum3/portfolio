@@ -8,46 +8,48 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 <template>
     <div id="header">
 
-<nav>
-  <div class="logo">
-    <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
+  <nav>
+    <div class="logo">
+      <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
+    </div>
+
+    <div class="hamburger">
+      <img id="burgericon" src='/images/burger-classic.png' alt="burgermenu" @click="openMenu" v-show="!isMenuOpen">
+      <img id="crossicon" src='/images/cross-classic.png' alt="cross" @click="closeMenu" v-show="isMenuOpen">
+    </div>
+
+    <ul class="menu">
+      <li><router-link  @click="scrollToTop" class="active" to="/work">My Work</router-link></li>
+      <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
+      <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
+    </ul>
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+      <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
+    </div>
+  </nav>
+
   </div>
 
-  <div class="hamburger">
-    <img id="burgericon" src='/images/burger-classic.png' alt="burgermenu" @click="openMenu" v-show="!isMenuOpen">
-    <img id="crossicon" src='/images/cross-classic.png' alt="cross" @click="closeMenu" v-show="isMenuOpen">
+  <div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
+  <ul>
+      <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+      <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
+      <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
+      <li>
+        <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="side_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+      </li>
+      <li>
+        <a href="https://github.com/Blum3"> <img class="side_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
+      </li>
+    </ul>
   </div>
-
-  <ul class="menu">
-    <li><router-link  @click="scrollToTop" class="active" to="/work">My Work</router-link></li>
-    <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
-    <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
-  </ul>
-  <div class="contact-icons">
-    <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
-    <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
-  </div>
-</nav>
-
-</div>
-
-<div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
-<ul>
-    <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
-    <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
-    <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
-    <li>
-      <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="side_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
-    </li>
-    <li>
-      <a href="https://github.com/Blum3"> <img class="side_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
-    </li>
-  </ul>
-</div>
 
   <section id="main_section">
     <project-preview :project="item" v-for="item in projects" :key="item.id"/>
   </section>
+
+
 
 
 </template>

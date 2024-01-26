@@ -78,6 +78,36 @@
   width: 80%;
 }
 
+/* -------------- FULL SCREEN IMG -------------- */
+
+#FullScreenView {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  /*set the top at the current scroll position*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .9);
+  text-align: center;
+}
+
+#FullScreenImg {
+  max-width: 90%;
+  max-height: 90%;
+  padding: 50px;
+}
+
+#CloseImgButton {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  color: #f1f1f1;
+  width: 40px;
+  cursor: pointer;
+}
+
 
 /* -------------- OTHER -------------- */
 
