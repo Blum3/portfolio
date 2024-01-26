@@ -16,8 +16,8 @@ const router = createRouter({
       component: () => import("../components/WorkPage.vue"),
     },
     {
-      path: "/inspirations",
-      name: "Inspirations",
+      path: "/morestuff",
+      name: "More stuff",
       component: () => import("../components/InspiPage.vue"),
     },
     {
@@ -25,7 +25,8 @@ const router = createRouter({
       name: "AboutMe",
       component: () => import("../components/AboutMePage.vue"),
     },
-  ]
-})
+  ],
+});
 
-export default router
+export default router;
+

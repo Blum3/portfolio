@@ -1,0 +1,89 @@
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/Inconsolata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DiabloFont';
+    src: url('../fonts/DiabloLight.ttf');
+}
+
+@font-face {
+    font-family: 'OverwatchFont';
+    src: url('../fonts/big_noodle_titling_oblique.ttf');
+}
+
+@font-face {
+    font-family: 'WoWFont';
+    src: url('../fonts/LifeCraft_Font.ttf');
+}
+
+@font-face {
+    font-family: 'DiabloFont2';
+    src: url('../fonts/PTSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'WowFont2';
+    src: url('../fonts/friz-quadrata.otf');
+}
+
+:root {
+    /* Style used */
+    --text-color: var(--text-color-classic);
+    --background-color: var(--background-color-classic);
+    --link-hover-color: var(--link-hover-color-classic);
+    --menu-background-color: var(--menu-background-color-classic);
+    --menu-text-color: var(--menu-text-color-classic);
+    --font-family: var(--font-family-classic);
+    --title-font-family: var(--title-font-family-classic);
+    --gm-font-family: var(--gm-font-family-classic);
+    --separator-url: var(--separator-url-classic);
+    
+  
+    /* Classic */
+    --text-color-classic: rgb(247, 247, 247);
+    --background-color-classic: rgb(46, 46, 46);
+    --link-hover-color-classic: rgb(29, 91, 226);
+    --menu-background-color-classic: #161616;
+    --menu-text-color-classic: rgb(247, 247, 247);
+    --font-family-classic: 'Inconsolata', sans-serif;
+    --title-font-family-classic: 'Inconsolata', sans-serif;
+    --logo-font-family-classic: 'Inconsolata', sans-serif;
+    --separator-url-classic: url('../images/separator-classic.png');
+  
+    /* Diablo */
+    --text-color-diablo: #d8d8d8;
+    --background-color-diablo: #1d1d1d;
+    --link-hover-color-diablo: #d20000;
+    --menu-background-color-diablo: #0e0e0e;
+    --menu-text-color-diablo: #d8d8d8;
+    --font-family-diablo: 'DiabloFont2', sans-serif;
+    --title-font-family-diablo: 'DiabloFont', sans-serif;
+    --logo-font-family-diablo: 'DiabloFont', sans-serif;
+    --separator-url-diablo: url('../images/separator-diablo.png');
+  
+    /* Overwatch */
+    --text-color-overwatch: rgb(8, 8, 44);
+    --background-color-overwatch: #c5c2c2;
+    --link-hover-color-overwatch: rgb(12, 171, 245);
+    --menu-background-color-overwatch: #281969;
+    --menu-text-color-overwatch: rgb(219, 219, 219);
+    --font-family-overwatch: 'OverwatchFont', sans-serif;
+    --title-font-family-overwatch: 'OverwatchFont', sans-serif;
+    --logo-font-family-overwatch: 'OverwatchFont', sans-serif;
+    --separator-url-overwatch: url('../images/separator-ow.png');
+  
+    /* WoW */
+    --text-color-wow: #e0d595;
+    --background-color-wow: #0e0e2c;
+    --link-hover-color-wow: rgb(167, 38, 6);
+    --menu-background-color-wow: rgb(1, 1, 22);
+    --menu-text-color-wow: #daa104;
+    --font-family-wow: 'WoWFont2', sans-serif;
+    --title-font-family-wow: 'WoWFont', sans-serif;
+    --logo-font-family-wow: 'WoWFont2', sans-serif;
+    --separator-url-wow: url('../images/separator-wow.png');
+}
+

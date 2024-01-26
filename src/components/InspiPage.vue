@@ -6,24 +6,24 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 
 
 <template>
-  <header>
+  <div id="header">
 
-    <nav>
-      <div class="logo">
-        <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
-      </div>
-      <ul class="menu">
-        <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
-        <li><router-link  @click="scrollToTop" class="active" to="/inspirations">Inspirations</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
-      </ul>
-      <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
-        <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
-      </div>
-    </nav>
+<nav>
+  <div class="logo">
+    <router-link @click="scrollToTop" to="/">Galilée Mason</router-link>
+  </div>
+  <ul class="menu">
+    <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+    <li><router-link  @click="scrollToTop" class="active"  to="/morestuff">More stuff</router-link></li>
+    <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
+  </ul>
+  <div class="contact-icons">
+    <a href="https://www.linkedin.com/in/galil%C3%A9e-mason-9051861b8/"> <img class="header_icon"  v-bind:src="currentIcon1" @mouseover="currentIcon1 = linkedinTxt" @mouseout="currentIcon1 = linkedinIcon">  </a>
+    <a href="https://github.com/Blum3"> <img class="header_icon"  v-bind:src="currentIcon2" @mouseover="currentIcon2 = gitTxt" @mouseout="currentIcon2 = gitIcon">  </a>
+  </div>
+</nav>
 
-  </header>
+</div>
 
   <section id="section1">
     <project-preview :project="item" v-for="item in projects" :key="item.id" />
@@ -35,55 +35,62 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 <script>
 
 export default {
-  name: "ReportsPage",
+  name: "More stuff",
   data() {
     return {
-      linkedinIcon: '/src/images/linkedinicon.png',
-      gitIcon: '/src/images/githubicon.png',
-      linkedinTxt: '/src/images/linkedintxt.png',
-      gitTxt: '/src/images/githubtxt.png',
-      currentIcon1: '/src/images/linkedinicon.png',
-      currentIcon2: '/src/images/githubicon.png',
+      linkedinIcon: '/images/linkedinicon.png',
+      gitIcon: '/images/githubicon.png',
+      linkedinTxt: '/images/linkedintxt.png',
+      gitTxt: '/images/githubtxt.png',
+      currentIcon1: '/images/linkedinicon.png',
+      currentIcon2: '/images/githubicon.png',
       projects : [
+      {
+          id : 3,
+          title : "Pochoirs (Stencils)",
+          subtitle : "Playing with color, light and layers",
+          description : "Here are some stencils that I make from pictures that, I think, would look good as stencils.",
+          last : false,
+          first : true,
+          pics_only : true,
+          slides: [
+            {
+              image: "/data/inspi/titou.png",
+            },
+            {
+              image: "/data/inspi/prof.png",
+            },
+            {
+              image: "/data/inspi/corn.png",
+            },
+          ],
+        },
         {
           id : 1,
           title : "In the Gamer's Brain",
           subtitle : "Célia Hodent",
-          description : "A book that I loved, telling how important interfaces and use experience is to video games.",
+          description : "A book that I loved, explaing why understanding the brain is critical when designing a game. Probably the book that got me into user experience in to video games.",
           last : false,
           pics_only : true,
           slides: [
             {
-              image: "src/data/inspi/itgb.jpg",
+              image: "/data/inspi/itgb.png",
             },
           ],
         },
         {
           id: 2,
-          title: "Information is beautiful",
-          subtitle: "David McCandless",
-          description: "A really beautiful book about data-visualisation",
-          last: false,
-          pics_only : true,
-          slides: [
-            {
-              image: "src/data/inspi/iib.jpg",
-            },
-          ],
-        },
-        {
-          id: 3,
-          title: "Game Next Door",
+          title: "Fin du Game + Game Next Door",
           subtitle: "",
-          description: "A Youtube channel talking about video games through game design, user experience and psychology.",
+          description: "I don't have the time to play every game releasing, the podcast \"Fin du Game\" is explaining the mechanics and the history behind games. \"Game Next Door\" is a Youtube channel talking about game design, user experience and psychology.",
           last: true,
           pics_only : true,
           slides: [
             {
-              image: "src/data/inspi/gnd.jpg",
+              image: "/data/inspi/fdggnd.png",
             },
           ],
-        },
+        }
       ]
     };
   },
@@ -99,5 +106,5 @@ export default {
 </script>
 
 <style scoped>
-  @import url('../assets/style1.css');
+  @import url('../assets/App.css');
 </style>

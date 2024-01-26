@@ -1,0 +1,180 @@
+
+/* -------------- GLOBAL -------------- */
+
+*{
+  color: var(--text-color);
+  text-align: center;
+}
+
+.project_container{
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* -------------- TEXTE -------------- */
+
+.title_and_subtitle {
+  display: flex;
+  width: 45%;
+}
+
+.title{
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 34px;
+  font-family: var(--title-font-family);
+}
+
+.subtitle{
+  font-weight: normal;
+  text-decoration: none;
+  padding-left: 24px;
+  font-style: italic;
+}
+
+.description{
+  margin-top: 0;
+  width: 45%;
+  text-align: justify;
+  overflow: auto;
+}
+
+/* -------------- CAROUSEL -------------- */
+
+
+
+
+.carousel {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.img_to_display{
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  /* make sure the image is in front of everything else */
+  z-index: 1000;
+}
+
+
+/* -------------- OTHER -------------- */
+
+
+#left, #right
+{
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  width: 80px;
+  background-color: transparent;
+  padding: 40px;
+}
+
+#left:hover
+{
+  cursor: pointer;
+  transform: scale(1.2) ;
+}
+
+#right:hover
+{
+  cursor: pointer;
+  /* scale and transform*/
+  transform: scale(1.2);
+}
+
+
+
+#left_deac {
+  padding: 40px;
+  width: 80px;
+  opacity: 0;
+}
+
+#right_deac {
+  padding: 40px;
+  width: 80px;
+  opacity: 0;
+}
+
+
+
+
+.separator {
+
+  background-image: var(--separator-url); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  height: 100px;
+  width:400px;
+  background-size: cover; /* Adjust the background size to cover the entire element */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  margin: 20px 0; 
+
+}
+
+
+
+/* -------------- RESPONSIVE -------------- */
+
+
+@media screen and (max-width: 1000px) {
+
+  .description, .title_and_subtitle {
+
+    width: 80%;
+  }
+
+  .slides {
+    height: 60vw; /* set the height to your desired value */
+    width: 80%;
+  }
+  
+  .img_to_display{
+    max-height: 60vw;
+    max-width: 100%;
+  }
+
+  .carousel
+  {
+      width: 100%;
+  }
+
+
+  #left, #right
+{
+  width: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+#left_deac {
+  width: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  opacity: 0;
+}
+
+#right_deac {
+  width: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  opacity: 0;
+}
+
+
+}

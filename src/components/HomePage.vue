@@ -5,7 +5,7 @@
 
 
 <template>
-  <header>
+  <div id="header">
 
     <nav>
       <div class="logo">
@@ -13,7 +13,7 @@
       </div>
       <ul class="menu">
         <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
-        <li><router-link  @click="scrollToTop"  to="/inspirations">Inspirations</router-link></li>
+        <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       </ul>
       <div class="contact-icons">
@@ -22,10 +22,11 @@
       </div>
     </nav>
 
+  </div>
 
-    <img id="anim" src="/src/images/anim-home.gif">
-
-  </header>
+  <div id="hello">
+    Hello, world.
+  </div>
 
 </template>
 
@@ -36,12 +37,12 @@ export default {
   name: "HomePage",
   data() {
     return {
-      linkedinIcon: '/src/images/linkedinicon.png',
-      gitIcon: '/src/images/githubicon.png',
-      linkedinTxt: '/src/images/linkedintxt.png',
-      gitTxt: '/src/images/githubtxt.png',
-      currentIcon1: '/src/images/linkedinicon.png',
-      currentIcon2: '/src/images/githubicon.png',
+      linkedinIcon: "/images/linkedinicon.png",
+      gitIcon: '/images/githubicon.png',
+      linkedinTxt: '/images/linkedintxt.png',
+      gitTxt: '/images/githubtxt.png',
+      currentIcon1: '/images/linkedinicon.png',
+      currentIcon2: '/images/githubicon.png',
     }
   },
   methods: {
@@ -56,11 +57,18 @@ export default {
 </script>
 
 <style scoped>
-  @import url('../assets/style1.css');
-  #anim{
-    width: 15%;
+  @import url('../assets/App.css');
+  
+  #hello{
+    font-family: var(--title-font-family);
+    height: 100vh;
+    color: var(--link-hover-color);
+    font-size: 100px;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    text-align: center;
   }
-  header {
-    height: 101vh;
-  }
+
 </style>

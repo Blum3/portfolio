@@ -1,0 +1,186 @@
+
+
+/* -------------- GLOBAL -------------- */
+
+* {
+    font-family: var(--font-family);
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+a {
+color: var(--text-color);
+}
+
+
+/* -------------- HEADER -------------- */
+
+#header {
+height: 50px;
+/* flex-box thing */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-size: cover;
+}
+
+nav {
+left: 0;
+height: 54px;
+width: 100%;
+margin: 0 auto;
+position: fixed;
+top: 0;
+z-index: 30000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--menu-background-color);
+}
+
+.logo a {
+color: var(--text-color);
+font-size: 30px;
+text-decoration: none;
+padding-left: 20px;
+color: var(--menu-text-color);
+font-family: var(--logo-font-family);
+}
+
+.logo a:hover {
+color: var(--link-hover-color);
+transition: 0.4s;
+}
+
+.menu {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu li {
+margin: 0;
+list-style: none;
+font-size: 20px;
+}
+
+.menu li a {
+color: var(--text-color);
+text-decoration: none;
+padding-left: 45px;
+padding-right: 45px;
+padding-top: 17px;
+padding-bottom: 16px;
+text-align: center;
+color: var(--menu-text-color);
+font-family: var(--title-font-family);
+}
+
+.menu li a.active {
+background-color: var(--text-color);
+color: var(--link-hover-color);
+}
+
+.menu li a:hover {
+background-color: var(--link-hover-color);
+color: var(--text-color);
+transition: 0.4s;
+}
+
+.contact-icons {
+display: flex;
+justify-content: center;
+align-items: center;
+padding-left: 100px;
+}
+
+.header_icon {
+width: 30px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+/* ... rest of the code ... */
+
+/* -------------- FOOTER -------------- */
+
+footer a {
+color: var(--menu-text-color);
+}
+
+footer {
+
+    /* flex-box thing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--menu-background-color);
+    color: var(--menu-text-color);
+    padding: 20px;
+    text-align: center;
+}
+footer p {
+    max-width: 500px;
+}
+
+/* ... rest of the code ... */
+
+/* -------------- ABOUT ME -------------- */
+
+.aboutme {
+min-height: 100vh;
+text-align: center;
+background-color: var(--background-color);
+color: var(--text-color);
+display: flex;
+flex-direction: column;
+justify-content: center;
+font-size: 18px;
+padding: 0 25%;
+}
+
+.picofme {
+width: 800px;
+padding-top: 30px;
+align-self: center;
+}
+
+/* ... rest of the code ... */
+
+/* -------------- RESPONSIVE -------------- */
+
+@media screen and (max-width: 1000px) {
+nav {
+    font-size: 10px;
+}
+.logo a {
+    font-size: 12px;
+    margin: 0;
+}
+.header_icon {
+    width: 20px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.menu li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    text-align: right;
+}
+
+.aboutme {
+    padding: 0 20px;
+    font-size: 14px;
+    }
+
+.picofme {
+    padding-top: 40px;
+    width: 100%;
+    }
+}
+
