@@ -19,6 +19,7 @@
 
       <ul class="menu">
         <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+        <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       </ul>
@@ -33,6 +34,7 @@
   <div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
     <ul>
         <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+        <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
         <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
         <li>

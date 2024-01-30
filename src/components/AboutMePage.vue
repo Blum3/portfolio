@@ -19,6 +19,7 @@
 
     <ul class="menu">
       <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+      <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
       <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
       <li><router-link  @click="scrollToTop" class="active" to="/aboutme">About Me</router-link></li>
     </ul>
@@ -33,6 +34,7 @@
   <div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
   <ul>
       <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+      <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
       <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
       <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
       <li>
@@ -47,10 +49,7 @@
   <div class="aboutme">
     <img src="/images/me2.png" class="picofme">
     <p>
-      My name is Galilée Mason, I am a 22 years old student at Paul Sabatier University and at the National School of Civic Aviation in M2 Human Machine Interaction. I am looking for an internship in UI/UX from 01/03/2024 to 01/08/2024.
-    </p>
-    <p>
-      Passionate about video games and design for a long time, I have the chance today to get involved in personal and collective projects around my passions, either at the university or during my free time. I am interested in the UI/UX aspect of computer systems. The purely visual aspect of my projects is important to me. I just came back from two semesters in Germany where I studied computer science at the HTW Berlin.
+      My name is Galilée Mason, I am a 22 years old student in M2 Human Computer Interaction. I am looking for an internship from 25/03/2024 to 25/09/2024.
     </p>
     <p>
       Skills :

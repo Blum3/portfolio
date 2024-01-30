@@ -20,6 +20,7 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 
   <ul class="menu">
     <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+    <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
     <li><router-link  @click="scrollToTop" class="active" to="/morestuff">More stuff</router-link></li>
     <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
   </ul>
@@ -34,6 +35,7 @@ import ProjectPreview from "@/components/ProjectPreview.vue";
 <div class="side-menu" :class="{ 'menu-open': isMenuOpen }">
 <ul>
     <li><router-link  @click="scrollToTop"  to="/work">My Work</router-link></li>
+    <li><router-link @click="scrollToTop" to="/games">Games</router-link></li>
     <li><router-link  @click="scrollToTop"  to="/morestuff">More stuff</router-link></li>
     <li><router-link  @click="scrollToTop"  to="/aboutme">About Me</router-link></li>
     <li>
@@ -69,58 +71,58 @@ export default {
       {
           id : 3,
           title : "Pochoirs (Stencils)",
-          subtitle : "Playing with color, light and layers",
-          description : "Here are some stencils that I make from pictures that, I think, would look good as stencils.",
+          subtitle : "Spraypaint, Photoshop",
+          description : "Here are some stencils that I make from pictures that, I think, would look good as stencils. I'm having fun playing with colors, light and layers",
           last : false,
           first : true,
           pics_only : true,
           slides: [
             {
-              image: "/data/inspi/titou.png",
+              image: "/data/more/titou.png",
             },
             {
-              image: "/data/inspi/prof.png",
+              image: "/data/more/prof.png",
             },
             {
-              image: "/data/inspi/corn.png",
+              image: "/data/more/corn.png",
             },
           ],
         },
         {
           id : 2,
           title : "Tarot Cards",
-          subtitle : "Tarot major arcana cards revisited",
+          subtitle : "Paper, Photoshop",
           description : "These are some of the cards I tried making after being fascinated by the story and the design of the Rider-Waite Tarot. I'm planning to finish these 22 cards and print them.",
           last : false,
           pics_only : true,
           slides: [
             {
-              image: "/data/inspi/tarot1.png",
+              image: "/data/more/tarot1.png",
             },
             {
-              image: "/data/inspi/tarot2.png",
+              image: "/data/more/tarot2.png",
             },
           ],
         },
         {
           id: 1,
           title: "From photos to flags",
-          subtitle: "",
+          subtitle: "Photoshop",
           description: "While walking in my city, I tried to transform the shapes and the colors from construction machines into flags. I've always been crazy about emblems, squad logos, country and county colors, so i had a lot of fun doing this.",
           last: true,
           pics_only : true,
           slides: [
             {
-              image: "/data/inspi/flag1.png",
+              image: "/data/more/flag1.png",
             },
             {
-              image: "/data/inspi/flag2.png",
+              image: "/data/more/flag2.png",
             },
             {
-              image: "/data/inspi/flag3.png",
+              image: "/data/more/flag3.png",
             },
             {
-              image: "/data/inspi/flag4.png",
+              image: "/data/more/flag4.png",
             }
           ],
         }

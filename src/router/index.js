@@ -16,9 +16,14 @@ const router = createRouter({
       component: () => import("../components/WorkPage.vue"),
     },
     {
+      path: "/games",
+      name: "Games",
+      component: () => import("../components/GamesPage.vue"),
+    },
+    {
       path: "/morestuff",
       name: "More stuff",
-      component: () => import("../components/InspiPage.vue"),
+      component: () => import("../components/MorePage.vue"),
     },
     {
       path: "/aboutme",
